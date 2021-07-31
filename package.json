@@ -1,0 +1,30 @@
+{
+  "name": "@sendanor/test",
+  "version": "0.0.1",
+  "description": "Tests for our libraries",
+  "main": "index.js",
+  "devDependencies": {
+    "@types/jest": "^26.0.24",
+    "@types/lodash": "^4.14.171",
+    "@types/node": "^16.4.8",
+    "jest": "^27.0.6",
+    "lodash": "^4.17.21",
+    "reflect-metadata": "^0.1.13",
+    "ts-jest": "^27.0.4",
+    "typescript": "^4.3.5"
+  },
+  "scripts": {
+    "test": "jest --watch",
+    "test:ci": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sendanor/test.git"
+  },
+  "author": "Jaakko Heusala",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sendanor/test/issues"
+  },
+  "homepage": "https://github.com/sendanor/test#readme"
+}
