@@ -14,6 +14,7 @@
     "typescript": "^4.3.5"
   },
   "scripts": {
+    "build": "tsc",
     "test": "jest --watch",
     "test:ci": "jest"
   },
