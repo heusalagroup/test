@@ -12,8 +12,23 @@ compatibility.
 
 ## Libraries
 
-| Repository                                                      | Summary                  |
-| --------------------------------------------------------------- | ------------------------ |
-| [@sendanor/typescript](https://github.com/sendanor/typescript)  | The core library         |
-| [@sendanor/ui](https://github.com/sendanor/ui)                  | The UI library           |
-| [@sendanor/repository](https://github.com/sendanor/repository)  | The Repository library   |
+| Repository                                                      | Summary                  | Access  |
+| --------------------------------------------------------------- | ------------------------ | ------- |
+| [@sendanor/typescript](https://github.com/sendanor/typescript)  | The core library         | Public  |
+| [@sendanor/ui](https://github.com/sendanor/ui)                  | The UI library           | Public  |
+| [@sendanor/repository](https://github.com/sendanor/repository)  | The Repository library   | Public  |
+| [@sendanor/pipeline](https://github.com/sendanor/pipeline)      | The pipeline processor   | Private |
+
+## Running tests
+
+For one time only:
+
+```
+npm run test:ci
+```
+
+While developing the code:
+
+```
+npm test
+```

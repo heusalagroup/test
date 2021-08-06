@@ -6,3 +6,7 @@
 	path = src/nor/ui
 	url = git@github.com:sendanor/ui.git
 	branch = main
+[submodule "src/nor/pipeline"]
+	path = src/nor/pipeline
+	url = git@github.com:sendanor/pipeline.git
+	branch = main
