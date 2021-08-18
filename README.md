@@ -18,6 +18,7 @@ compatibility.
 | [@sendanor/ui](https://github.com/sendanor/ui)                  | The UI library           | Public  |
 | [@sendanor/repository](https://github.com/sendanor/repository)  | The Repository library   | Public  |
 | [@sendanor/pipeline](https://github.com/sendanor/pipeline)      | The pipeline processor   | Private |
+| [@sendanor/matrix](https://github.com/sendanor/matrix)          | The Matrix library       | Private |
 
 ## Running tests
 
