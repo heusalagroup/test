@@ -1,4 +1,4 @@
-# @sendanor/test
+# @heusalagroup/test
 
 This is a unit test environment for our TypeScript libraries.
 
@@ -14,11 +14,11 @@ compatibility.
 
 | Repository                                                      | Summary                  | Access  |
 | --------------------------------------------------------------- | ------------------------ | ------- |
-| [@sendanor/typescript](https://github.com/sendanor/typescript)  | The core library         | Public  |
-| [@sendanor/ui](https://github.com/sendanor/ui)                  | The UI library           | Public  |
-| [@sendanor/repository](https://github.com/sendanor/repository)  | The Repository library   | Public  |
+| [@heusalagroup/typescript](https://github.com/heusalagroup/typescript)  | The core library         | Public  |
+| [@heusalagroup/ui](https://github.com/heusalagroup/ui)                  | The UI library           | Public  |
+| [@heusalagroup/repository](https://github.com/heusalagroup/repository)  | The Repository library   | Public  |
 | [@sendanor/pipeline](https://github.com/sendanor/pipeline)      | The pipeline processor   | Private |
-| [@sendanor/matrix](https://github.com/sendanor/matrix)          | The Matrix library       | Private |
+| [@heusalagroup/matrix](https://github.com/heusalagroup/matrix)          | The Matrix library       | Private |
 
 ## Running tests
 
@@ -33,3 +33,4 @@ While developing the code:
 ```
 npm test
 ```
+
