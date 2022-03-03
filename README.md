@@ -14,11 +14,11 @@ compatibility.
 
 | Repository                                                      | Summary                  | Access  |
 | --------------------------------------------------------------- | ------------------------ | ------- |
-| [@heusalagroup/typescript](https://github.com/heusalagroup/typescript)  | The core library         | Public  |
-| [@heusalagroup/ui](https://github.com/heusalagroup/ui)                  | The UI library           | Public  |
-| [@heusalagroup/repository](https://github.com/heusalagroup/repository)  | The Repository library   | Public  |
+| [@heusalagroup/fi.hg.core](https://github.com/heusalagroup/fi.hg.core)  | The core library         | Public  |
+| [@heusalagroup/fi.hg.ui](https://github.com/heusalagroup/fi.hg.ui)                  | The UI library           | Public  |
+| [@heusalagroup/fi.hg.repository](https://github.com/heusalagroup/fi.hg.repository)  | The Repository library   | Public  |
 | [@sendanor/pipeline](https://github.com/sendanor/pipeline)      | The pipeline processor   | Private |
-| [@heusalagroup/matrix](https://github.com/heusalagroup/matrix)          | The Matrix library       | Private |
+| [@heusalagroup/fi.hg.matrix](https://github.com/heusalagroup/fi.hg.matrix)          | The Matrix library       | Private |
 
 ## Running tests
 
