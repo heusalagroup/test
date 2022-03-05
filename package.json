@@ -1,5 +1,5 @@
 {
-  "name": "@sendanor/test",
+  "name": "@heusalagroup/test",
   "version": "0.0.1",
   "description": "Tests for our libraries",
   "main": "index.js",
@@ -21,12 +21,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sendanor/test.git"
+    "url": "git+https://github.com/heusalagroup/test.git"
   },
   "author": "Jaakko Heusala",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sendanor/test/issues"
+    "url": "https://github.com/heusalagroup/test/issues"
   },
-  "homepage": "https://github.com/sendanor/test#readme"
+  "homepage": "https://github.com/heusalagroup/test#readme"
 }

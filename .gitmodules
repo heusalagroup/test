@@ -1,16 +1,3 @@
-[submodule "src/nor/ts"]
-	path = src/nor/ts
-	url = git@github.com:sendanor/typescript.git
-	branch = main
-[submodule "src/nor/ui"]
-	path = src/nor/ui
-	url = git@github.com:sendanor/ui.git
-	branch = main
-[submodule "src/nor/pipeline"]
-	path = src/nor/pipeline
-	url = git@github.com:sendanor/pipeline.git
-	branch = main
-[submodule "src/nor/matrix"]
-	path = src/nor/matrix
-	url = git@github.com:sendanor/matrix.git
-	branch = main
+[submodule "src/fi/hg"]
+	path = src/fi/hg
+	url = git@github.com:heusalagroup/fi.hg.git

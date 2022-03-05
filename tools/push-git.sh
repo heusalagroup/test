@@ -13,9 +13,9 @@ fi
   set -x
 
   git push -q
-  if test -d src/nor/matrix/   ; then ( cd src/nor/matrix/   && git push -q ); fi
-  if test -d src/nor/pipeline/ ; then ( cd src/nor/pipeline/ && git push -q ); fi
-  if test -d src/nor/ts/       ; then ( cd src/nor/ts/       && git push -q ); fi
-  if test -d src/nor/ui/       ; then ( cd src/nor/ui/       && git push -q ); fi
+  if test -d src/fi/hg/matrix/   ; then ( cd src/fi/hg/matrix/   && git push -q ); fi
+  if test -d src/fi/hg/pipeline/ ; then ( cd src/fi/hg/pipeline/ && git push -q ); fi
+  if test -d src/fi/hg/ts/       ; then ( cd src/fi/hg/ts/       && git push -q ); fi
+  if test -d src/fi/hg/ui/       ; then ( cd src/fi/hg/ui/       && git push -q ); fi
 
 ) && echo Success || echo FAIL
