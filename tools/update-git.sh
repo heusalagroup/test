@@ -15,7 +15,7 @@ fi
   git pull -q
   if test -d src/fi/hg/matrix/   ; then ( cd src/fi/hg/matrix/   && git pull -q ); fi
   if test -d src/fi/hg/pipeline/ ; then ( cd src/fi/hg/pipeline/ && git pull -q ); fi
-  if test -d src/fi/hg/ts/       ; then ( cd src/fi/hg/ts/       && git pull -q ); fi
+  if test -d src/fi/hg/core/       ; then ( cd src/fi/hg/core/       && git pull -q ); fi
   if test -d src/fi/hg/ui/       ; then ( cd src/fi/hg/ui/       && git pull -q ); fi
 
 ) && echo Success || echo FAIL
