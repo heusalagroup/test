@@ -34,3 +34,7 @@ While developing the code:
 npm test
 ```
 
+## License
+
+Copyright (c) Heusala Group. All rights reserved. Licensed under the MIT License (the "[License](./LICENSE)");
+
