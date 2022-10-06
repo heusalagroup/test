@@ -18,10 +18,6 @@
 	path = src/fi/hg/matrix
 	url = git@github.com:heusalagroup/fi.hg.matrix.git
 	branch = main
-[submodule "src/fi/hg/snmp"]
-	path = src/fi/hg/snmp
-	url = git@github.com:heusalagroup/fi.hg.snmp.git
-	branch = main
 [submodule "src/fi/hg/ecb"]
 	path = src/fi/hg/ecb
 	url = git@github.com:heusalagroup/fi.hg.ecb.git
