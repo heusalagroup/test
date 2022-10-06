@@ -1,3 +1,64 @@
-[submodule "src/fi/hg"]
-	path = src/fi/hg
-	url = git@github.com:heusalagroup/fi.hg.git
+[submodule "src/fi/hg/core"]
+	branch = main
+	path = src/fi/hg/core
+	url = git@github.com:heusalagroup/fi.hg.core.git
+[submodule "src/fi/hg/node"]
+	path = src/fi/hg/node
+	url = git@github.com:heusalagroup/fi.hg.node.git
+	branch = main
+[submodule "src/fi/hg/backend"]
+	path = src/fi/hg/backend
+	url = git@github.com:heusalagroup/fi.hg.backend.git
+	branch = main
+[submodule "src/fi/hg/frontend"]
+	path = src/fi/hg/frontend
+	url = git@github.com:heusalagroup/fi.hg.frontend.git
+	branch = main
+[submodule "src/fi/hg/matrix"]
+	path = src/fi/hg/matrix
+	url = git@github.com:heusalagroup/fi.hg.matrix.git
+	branch = main
+[submodule "src/fi/hg/snmp"]
+	path = src/fi/hg/snmp
+	url = git@github.com:heusalagroup/fi.hg.snmp.git
+	branch = main
+[submodule "src/fi/hg/ecb"]
+	path = src/fi/hg/ecb
+	url = git@github.com:heusalagroup/fi.hg.ecb.git
+	branch = main
+[submodule "src/fi/hg/ssr"]
+	path = src/fi/hg/ssr
+	url = git@github.com:heusalagroup/fi.hg.ssr.git
+	branch = main
+[submodule "src/fi/hg/repository"]
+	path = src/fi/hg/repository
+	url = git@github.com:heusalagroup/fi.hg.repository.git
+	branch = main
+[submodule "src/fi/hg/mysql"]
+	path = src/fi/hg/mysql
+	url = git@github.com:heusalagroup/fi.hg.mysql.git
+	branch = main
+[submodule "src/fi/hg/pg"]
+	path = src/fi/hg/pg
+	url = git@github.com:heusalagroup/fi.hg.pg.git
+	branch = main
+[submodule "src/fi/hg/google"]
+	path = src/fi/hg/google
+	url = git@github.com:heusalagroup/fi.hg.google.git
+	branch = main
+[submodule "src/fi/hg/pipeline"]
+	path = src/fi/hg/pipeline
+	url = git@github.com:heusalagroup/fi.hg.pipeline.git
+	branch = main
+[submodule "src/fi/hg/discord"]
+	path = src/fi/hg/discord
+	url = git@github.com:heusalagroup/fi.hg.discord.git
+	branch = main
+[submodule "src/fi/hg/create"]
+	path = src/fi/hg/create
+	url = git@github.com:heusalagroup/fi.hg.create.git
+	branch = main
+[submodule "src/fi/hg/dashboard"]
+	path = src/fi/hg/dashboard
+	url = git@github.com:heusalagroup/fi.hg.dashboard.git
+	branch = main
