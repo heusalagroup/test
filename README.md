@@ -10,6 +10,22 @@ This way the testing environment is separated from the actual source code of our
 It also makes it easier to run newer tests against older versions of the project in order to test backwards 
 compatibility.
 
+## Working on the development environment
+
+### Fetching source code
+
+```bash
+git clone git@github.com:heusalagroup/procurenode.app.git procurenode.app
+cd procurenode.app
+git submodule update --init --recursive
+```
+
+### Updating source code modules
+
+```bash
+./scripts/pull-all.sh
+```
+
 ## Libraries
 
 | Repository                                                      | Summary                  | Access  |
