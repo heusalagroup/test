@@ -15,8 +15,8 @@ compatibility.
 ### Fetching source code
 
 ```bash
-git clone git@github.com:heusalagroup/procurenode.app.git procurenode.app
-cd procurenode.app
+git clone git@github.com:heusalagroup/test.git test
+cd test
 git submodule update --init --recursive
 ```
 
