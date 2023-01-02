@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsc",
     "test": "jest --watch --watchAll --runInBand",
-    "test:ci": "jest"
+    "test:ci": "jest",
+    "clear": "jest --clearCache"
   },
   "repository": {
     "type": "git",
