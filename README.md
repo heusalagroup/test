@@ -32,6 +32,20 @@ Next, install the necessary dependencies:
 npm install
 ```
 
+### Clearing the Cache
+
+There may be instances where you need to clear the cache, such as when you 
+encounter errors about non-existent files. To clear the cache, run the following 
+command:
+
+```bash
+npm run clear
+```
+
+This will remove any cached files and allow you to start fresh. Note that this 
+may cause some tasks to take longer to run the next time they are executed, as 
+the system will need to rebuild the cache from scratch.
+
 ### Updating source code modules
 
 To update the source code modules to the latest version, run:
