@@ -1,4 +1,4 @@
-name: Run tests and publish release
+name: Cross-OS Tests and Release
 
 on:
   push:
@@ -32,6 +32,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - run: git submodule update --init --recursive
+    - run: git config --global url."git@github.com:heusalagroup/".insteadOf "https://github.com/heusalagroup/"
     - name: List changes
       run: ./scripts/write-release-message.sh
     - name: Create release and tag
@@ -52,3 +53,5 @@ jobs:
           git push origin v0.1.${{ github.run_number }}
           cd -
         done
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
