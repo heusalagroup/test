@@ -1,3 +1,5 @@
+![CI](https://github.com/heusalagroup/test/actions/workflows/ci.yml/badge.svg)
+
 # @heusalagroup/test
 
 This is a unit test environment for our TypeScript libraries.
@@ -49,6 +51,19 @@ While developing the code:
 ```
 npm test
 ```
+
+## Development with GitHub using SSH
+
+To use SSH when working with submodules in this repository, you will need to
+configure your Git settings as follows:
+
+```
+git config --global url."git@github.com:heusalagroup/".insteadOf "https://github.com/heusalagroup/"
+```
+
+This configuration is necessary because the repository uses HTTPS links for
+read-only access. However, you may prefer to use SSH when pushing and pulling
+changes.
 
 ## License
 
