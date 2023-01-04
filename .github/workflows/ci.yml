@@ -30,6 +30,7 @@ jobs:
     needs:
     - test
     steps:
+    - uses: actions/checkout@v3
     - name: List changes
       run: |
         echo "This release contains the following changes:" > changes.md &&
