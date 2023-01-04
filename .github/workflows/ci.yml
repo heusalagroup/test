@@ -13,10 +13,10 @@ jobs:
     name: Run tests
     strategy:
       matrix:
-        os: [ubuntu-20.04]
-        node-version: [18]
-#        os: [ubuntu-22.04, ubuntu-20.04, windows-latest, macos-latest]
-#        node-version: [14, 16, 18]
+#        os: [ubuntu-20.04]
+#        node-version: [18]
+        os: [ubuntu-22.04, ubuntu-20.04, windows-latest, macos-latest]
+        node-version: [14, 16, 18]
     runs-on: ${{ matrix.os }}
     steps:
     - uses: actions/checkout@v3
