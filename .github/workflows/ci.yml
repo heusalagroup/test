@@ -31,6 +31,7 @@ jobs:
     - test
     steps:
     - uses: actions/checkout@v3
+    - run: git submodule update --init --recursive
     - name: List changes
       run: ./scripts/write-release-message.sh
     - name: Create release and tag
@@ -43,3 +44,11 @@ jobs:
         body_path: "changes.md"
         draft: false
         prerelease: false
+    - name: Loop through submodules and create tags
+      run: |
+        for submodule in $(git submodule foreach --quiet 'echo $name'); do
+          cd $submodule
+          git tag v0.1.${{ github.run_number }}
+          git push origin v0.1.${{ github.run_number }}
+          cd -
+        done
