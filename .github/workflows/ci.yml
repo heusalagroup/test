@@ -71,14 +71,7 @@ jobs:
       run: ./scripts/write-release-message.sh
     - name: Move changes
       run: mv changes.md "${{ github.RUNNER_TEMP }}/changes.md"
-    - name: Create release and tag
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        tag_name: v0.1.${{ github.run_number }}
-        release_name: Release v0.1.${{ github.run_number }}
-        body_path: "${{ github.RUNNER_TEMP }}/changes.md"
-        draft: false
-        prerelease: false
-      working-directory: ${{ matrix.submodule }}
+    - name: Setup GitHub access
+      run: git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
+    - name: Add release tag "v0.1.${{ github.run_number }}" "Release v0.1.${{ github.run_number }}"
+      run: ./scripts/tag-all-submodules.sh
