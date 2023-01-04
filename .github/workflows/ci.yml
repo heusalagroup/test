@@ -24,8 +24,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: npm run test:ci
-  list-changes:
-    name: Collect changes
+  release:
+    name: Collect changes and Publish release
     runs-on: ubuntu-latest
     needs:
     - test
@@ -33,15 +33,7 @@ jobs:
     - name: List changes
       run: |
         echo "This release contains the following changes:" > changes.md &&
-        git log --oneline --no-merges --format="%s" $(git describe --tags --abbrev=0)..${{ github.ref }} |
-        jq -R -s -c 'split("\n") | map({"type": "list-item", "text": .})' |
-        jq -s -c '{"type": "list", "items": .}' >> changes.md
-  release:
-    name: Publish release
-    runs-on: ubuntu-latest
-    needs:
-    - list-changes
-    steps:
+        git log --oneline --no-merges --format="%s" $(git describe --tags --abbrev=0)..HEAD >> changes.md
     - name: Create release and tag
       uses: actions/create-release@v1
       env:
