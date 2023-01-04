@@ -69,14 +69,12 @@ jobs:
         - src/fi/hg/mysql
     steps:
     - uses: actions/checkout@v3
-    - name: Setup GitHub access
-      run: git config --global url."https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/".insteadOf "https://github.com/"
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    - name: Setup git user
+    - name: Add release tag
       run: |
+        git config --global url."https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/".insteadOf "https://github.com/"
         git config --global user.name "$(git --no-pager log --format=format:'%an' -n 1)"
         git config --global user.email "$(git --no-pager log --format=format:'%ae' -n 1)"
-    - run: git submodule update --init --recursive
-    - name: Add release tag
-      run: ./scripts/tag-all-submodules.sh "v0.1.${{ github.run_number }}" "Release v0.1.${{ github.run_number }}"
+        git submodule update --init --recursive
+        ./scripts/tag-all-submodules.sh "v0.1.${{ github.run_number }}" "Release v0.1.${{ github.run_number }}"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
