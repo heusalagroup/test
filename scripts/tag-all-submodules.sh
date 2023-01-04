@@ -17,7 +17,7 @@ cat .gitmodules |grep -F path|awk '{print $3}'|while read DIR; do
     set -x
     if test "x$GITHUB_TOKEN" != x; then
       ORIGIN_URL="$(git remote get-url origin)"
-      ORG_REPO="$(echo $ORIGIN_URL|sed -re 's/^git@github.com://' -e 's@^https://[.*@]?github.com/@@')"
+      ORG_REPO="$(echo $ORIGIN_URL|sed -re 's@^.*github.com[:/]@@')"
       git remote set-url origin "https://x-access-token:$GITHUB_TOKEN@github.com/$ORG_REPO"
     fi
     git tag -a "$TAG" -m "$MESSAGE" \
