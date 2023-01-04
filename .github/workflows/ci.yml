@@ -32,7 +32,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: List changes
-      run: git log --oneline --no-merges --format="%s" $(git describe --tags --abbrev=0)..HEAD > changes.md
+      run: ./scripts/get-release-message.sh
     - name: Create release and tag
       uses: actions/create-release@v1
       env:
