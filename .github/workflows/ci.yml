@@ -50,6 +50,8 @@ jobs:
         prerelease: false
 
   release-modules:
+    permissions:
+      contents: write
     name: Publish Modules
     runs-on: ubuntu-latest
     needs:
