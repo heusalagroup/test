@@ -8,6 +8,7 @@ on:
   workflow_dispatch:
 
 jobs:
+
   test:
     name: Run tests
     strategy:
@@ -24,6 +25,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: npm run test:ci
+
   release:
     name: Collect changes and Publish release
     runs-on: ubuntu-latest
@@ -32,7 +34,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - run: git submodule update --init --recursive
-    - run: git config --global url."git@github.com:heusalagroup/".insteadOf "https://github.com/heusalagroup/"
     - name: List changes
       run: ./scripts/write-release-message.sh
     - name: Create release and tag
@@ -45,13 +46,39 @@ jobs:
         body_path: "changes.md"
         draft: false
         prerelease: false
-    - name: Loop through submodules and create tags
-      run: |
-        for submodule in $(git submodule foreach --quiet 'echo $name'); do
-          cd $submodule
-          git tag v0.1.${{ github.run_number }}
-          git push origin v0.1.${{ github.run_number }}
-          cd -
-        done
+
+  release-modules:
+    name: Publish Modules
+    runs-on: ubuntu-latest
+    needs:
+    - release
+    strategy:
+      matrix:
+        submodule:
+        - src/fi/hg/core
+        - src/fi/hg/node
+        - src/fi/hg/backend
+        - src/fi/hg/frontend
+        - src/fi/hg/matrix
+        - src/fi/hg/ecb
+        - src/fi/hg/ssr
+        - src/fi/hg/repository
+        - src/fi/hg/mysql
+    steps:
+    - uses: actions/checkout@v3
+    - run: git submodule update --init --recursive
+    - name: List changes
+      run: ./scripts/write-release-message.sh
+    - name: Move changes
+      run: mv changes.md "${{ github.RUNNER_TEMP }}/changes.md"
+    - name: Create release and tag
+      uses: actions/create-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: v0.1.${{ github.run_number }}
+        release_name: Release v0.1.${{ github.run_number }}
+        body_path: "${{ github.RUNNER_TEMP }}/changes.md"
+        draft: false
+        prerelease: false
+      working-directory: ${{ matrix.submodule }}
