@@ -20,7 +20,7 @@ cat .gitmodules |grep -F path|awk '{print $3}'|while read DIR; do
       ORG_REPO="$(echo $ORIGIN_URL|sed -re 's@^.*github.com[:/]@@')"
       git remote set-url origin "https://x-access-token:$GITHUB_TOKEN@github.com/$ORG_REPO"
     fi
-    git tag -a "$TAG" -m "$MESSAGE" \
+    git tag -a "$TAG" -m "$MESSAGE"
     git push origin "$TAG"
   )
 done
