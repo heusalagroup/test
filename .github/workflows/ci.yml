@@ -35,9 +35,12 @@ jobs:
     - test
     steps:
     - uses: actions/checkout@v3
+
     - run: git submodule update --init --recursive
+
     - name: List changes
       run: ./scripts/write-release-message.sh
+
     - name: Create release and tag
       uses: actions/create-release@v1
       env:

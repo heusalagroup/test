@@ -58,3 +58,7 @@
 	path = src/fi/hg/dashboard
 	url = https://github.com/heusalagroup/fi.hg.dashboard.git
 	branch = main
+[submodule "docs"]
+	path = docs
+	url = https://github.com/heusalagroup/docs.hg.fi.git
+	branch = main
