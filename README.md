@@ -94,6 +94,15 @@ This configuration is necessary because the repository uses HTTPS links for
 read-only access. However, you may prefer to use SSH when pushing and pulling 
 changes.
 
+## Environment Variables
+
+The following environment variables can be set to enable optional features in 
+the testing environment:
+
+* `OPENAI_API_KEY`: If specified, system tests for the OpenAI API will be run. 
+  To obtain an API key, sign up for an account at 
+  [https://openai.com/docs/getting-started/authentication/](https://openai.com/docs/getting-started/authentication/).
+
 ## License
 
 Copyright (c) Heusala Group. All rights reserved. Licensed under the MIT License 
