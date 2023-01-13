@@ -111,7 +111,7 @@ the testing environment:
 You can customize which modules to run using:
 
 ```
-TEST_SUITES=core,node,backend npm test
+TEST_SCOPES=core,node,backend npm test
 ```
 
 Available scopes:
