@@ -102,6 +102,37 @@ the testing environment:
 * `OPENAI_API_KEY`: If specified, system tests for the OpenAI API will be run. 
   To obtain an API key, sign up for an account at 
   [https://openai.com/docs/getting-started/authentication/](https://openai.com/docs/getting-started/authentication/).
+* `TEST_SCOPES`: You can select which HG modules to test. Defaults to `all`. 
+  See test scopes below.
+* `TEST_TIMEOUT`: You can change the test timeout. Defaults to `300000`.
+
+## Test scopes
+
+You can customize which modules to run using:
+
+```
+TEST_SUITES=core,node,backend npm test
+```
+
+Available scopes:
+
+- `core`
+- `node`
+- `backend`
+- `frontend`
+- `create`
+- `dashboard`
+- `discord`
+- `ecb`
+- `google`
+- `matrix`
+- `mysql`
+- `pg`
+- `pipeline`
+- `repository`
+- `ssr`
+
+The `all` is also available, and is the default scope.
 
 ## License
 
