@@ -1,5 +1,7 @@
 ![CI](https://github.com/heusalagroup/test/actions/workflows/ci.yml/badge.svg)
 
+**Join our [Discord](https://discord.gg/UBTrHxA78f) to discuss about our software!**
+
 # @heusalagroup/test
 
 This is a unit test environment for our TypeScript libraries.
