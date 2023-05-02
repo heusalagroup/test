@@ -61,3 +61,4 @@
 [submodule "src/fi/hg/jest"]
 	path = src/fi/hg/jest
 	url = git@github.com:heusalagroup/fi.hg.jest.git
+	branch = main
