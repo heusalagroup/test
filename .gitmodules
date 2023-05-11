@@ -26,10 +26,6 @@
 	path = src/fi/hg/ssr
 	url = https://github.com/heusalagroup/fi.hg.ssr.git
 	branch = main
-[submodule "src/fi/hg/repository"]
-	path = src/fi/hg/repository
-	url = https://github.com/heusalagroup/fi.hg.repository.git
-	branch = main
 [submodule "src/fi/hg/mysql"]
 	path = src/fi/hg/mysql
 	url = https://github.com/heusalagroup/fi.hg.mysql.git
