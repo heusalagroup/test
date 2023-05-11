@@ -8,7 +8,7 @@
  * 3. `system`: Full system tests which require real running system (here in this project we don't have any)
  * 4. `integration`: There is also a special scope "integration" which will enable MySQL and PostgreSQL
  *                  integration tests against a full server. To run these, you need to install
- *                  `mysql` and/or `pg` NPM modules and provide configuration parameters. See `fi.hg.repository`.
+ *                  `mysql` and/or `pg` NPM modules and provide configuration parameters.
  *
  * @type {string[]}
  */
@@ -38,7 +38,6 @@ module.exports = {
       "./src/fi/hg/mysql",
       "./src/fi/hg/pg",
       "./src/fi/hg/pipeline",
-      "./src/fi/hg/repository",
       "./src/fi/hg/ssr"
     ]: [])
   ],
