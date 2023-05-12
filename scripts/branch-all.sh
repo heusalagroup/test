@@ -2,7 +2,7 @@
 cd "$(dirname "$0")/.."
 #set -x
 
-FORMAT='%-15s %-22s %-30s %-20s %s\n'
+FORMAT='%-35s %-22s %-30s %-20s %s\n'
 
 ROOT_BRANCH="$(
     git branch \
@@ -17,7 +17,6 @@ cat .gitmodules |grep -F path|awk '{print $3}'|while read DIR; do
   (
     cd $DIR
     MODULE=$(echo $DIR|sed -re 's@^.*/src/@@'|tr '/' '.')
-    CONTEXT=$(echo $DIR|awk -F'/' '{print $1}')
     TAG=$((git describe --tags 2>/dev/null)|sort -n|tail -n1)
     if test "x$TAG" = x; then
       TAG="$(git rev-parse --short HEAD)"
@@ -29,6 +28,6 @@ cat .gitmodules |grep -F path|awk '{print $3}'|while read DIR; do
        | tr -d '\n'
     )"
 
-    printf "$FORMAT" "$BRANCH" "$CONTEXT" "$MODULE" "$TAG" "$DIR"
+    printf "$FORMAT" "$BRANCH" "$MODULE" "$TAG" "$DIR"
   ); 
 done
