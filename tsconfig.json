@@ -20,6 +20,8 @@
     ],
     "skipLibCheck": true,
     "esModuleInterop": true,
+    "noUnusedLocals": false,
+    "allowUnusedLabels": false,
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "strict": true,
