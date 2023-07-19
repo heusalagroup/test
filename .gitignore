@@ -1,5 +1,9 @@
 build
 .idea
+.DS_store
+certs/*.key
+certs/*.crt
+certs/*.csr
 
 # Logs
 logs
