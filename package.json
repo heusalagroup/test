@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsc",
     "test": "jest --watch --watchAll --runInBand",
-    "test:ci": "jest --runInBand",
+    "test:coverage": "jest --watch --watchAll --runInBand --coverage",
+    "test:ci": "jest --runInBand --coverage",
     "clear": "jest --clearCache"
   },
   "repository": {

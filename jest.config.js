@@ -41,6 +41,11 @@ module.exports = {
       "./src/fi/hg/ssr"
     ]: [])
   ],
+  collectCoverageFrom: [
+    '**/*.{ts,tsx}',
+    '!**/node_modules/**',
+  ],
+  coverageDirectory: './coverage',
   testTimeout: TEST_TIMEOUT,
   setupFilesAfterEnv: [
     "./src/fi/hg/jest/matchers/index.ts"
