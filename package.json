@@ -7,7 +7,7 @@
     "build": "tsc",
     "test": "NODE_OPTIONS=--max_old_space_size=8192 jest --watch --watchAll --runInBand",
     "test:coverage": "NODE_OPTIONS=--max_old_space_size=8192 jest --watch --watchAll --runInBand --coverage",
-    "test:ci": "NODE_OPTIONS=--max_old_space_size=8192 jest --runInBand --coverage",
+    "test:ci": "jest --runInBand --coverage",
     "clear": "jest --clearCache"
   },
   "repository": {
