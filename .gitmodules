@@ -58,3 +58,8 @@
 	path = src/fi/hg/jest
 	url = https://github.com/heusalagroup/fi.hg.jest.git
 	branch = main
+[submodule "src/fi/hg/whois"]
+	path = src/fi/hg/whois
+	url = git@github.com:heusalagroup/fi.hg.whois.git
+[submodule "./src/fi/hg/whois"]
+	branch = main
